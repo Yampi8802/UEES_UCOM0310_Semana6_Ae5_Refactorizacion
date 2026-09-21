@@ -8,7 +8,7 @@ Completa los seis escenarios **sin refactorizar el diseño**.
 | LB-02 | VIP válida       | VIP, correo válido, 5h    | CONFIRMADA | 34.0    | "Guardando reserva R-001" y "Correo enviado a [ana@uees.edu.ec](mailto:ana@uees.edu.ec)" |
 | LB-03 | Correo inválido  | "incorrecto"              | PENDIENTE  | 0.0     | No aparecen mensajes de guardado ni correo. No se produce excepción visible              |
 | LB-04 | Periodo inválido | fin <= inicio             | PENDIENTE  | 0.0     | No aparecen mensajes de guardado ni correo. No se produce excepción visible              |
-| LB-05 | Límite válido    | 2h anticipación           | CONFIRMADA | 34.0    | "Guardando reserva R-001" y "Correo enviado a [ana@uees.edu.ec](mailto:ana@uees.edu.ec)" |
+| LB-05 | Límite válido    | 2h anticipación           | CONFIRMADA | 40.0    | "Guardando reserva R-001" y "Correo enviado a [ana@uees.edu.ec](mailto:ana@uees.edu.ec)" |
 | LB-06 | Límite inválido  | 1h anticipación           | PENDIENTE  | 0.0     | No aparecen mensajes de guardado ni correo. No se produce excepción visible              |
 
 ## Preguntas
