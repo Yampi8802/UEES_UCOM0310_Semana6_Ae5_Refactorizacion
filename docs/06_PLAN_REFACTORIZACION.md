@@ -18,3 +18,16 @@ No implementes todavía.
 5. Introducir nuevas representaciones para correo y período al final, porque requieren cambios más amplios en el modelo.
 
 La evaluación se centra en **la justificación**, no en repetir exactamente este orden.
+## Resultado de la ejecución en Ae5
+
+El plan anterior correspondía a la etapa de diagnóstico y sirvió como referencia para decidir los cambios. Durante la ejecución de Ae5 se priorizaron tres refactorizaciones que podían aplicarse de forma incremental y verificarse con las pruebas unitarias existentes.
+
+Las refactorizaciones realizadas fueron:
+
+| Orden | Refactorización realizada | Commit | Resultado |
+| ----: | ------------------------------------------------ | ------- | --------------------------------------------- |
+| 1 | Separar la validación de la reserva | `2fc6002` | `mvn clean test` exitoso: 7 pruebas, 0 fallos |
+| 2 | Mover el cálculo del total a `Reserva` | `8017c8e` | `mvn clean test` exitoso: 7 pruebas, 0 fallos |
+| 3 | Extraer la notificación de reserva | `021459b` | `mvn clean test` exitoso: 7 pruebas, 0 fallos |
+
+Cada cambio se realizó de forma incremental siguiendo el ciclo de prueba verde, cambio pequeño, nueva prueba verde y commit. Las tres refactorizaciones conservaron el comportamiento protegido por las pruebas unitarias.
