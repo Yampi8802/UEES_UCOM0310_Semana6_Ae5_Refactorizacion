@@ -1,7 +1,5 @@
 # Fase L | Plan priorizado de refactorización
 
-No implementes todavía.
-
 | Orden | Cambio   | Por qué primero /después | Pruebas requeridas | Dependencias |
 | ----: | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 |     1 | Extraer cálculo VIP                                 | Es una parte pequeña y bien delimitada del método. Permite reducir una responsabilidad sin modificar las reglas actuales de tarifa.                                                               | `vipConservaResultadoActual()`, `normalValidaConservaResultadoActual()`                                     | Línea base manual                                     |
