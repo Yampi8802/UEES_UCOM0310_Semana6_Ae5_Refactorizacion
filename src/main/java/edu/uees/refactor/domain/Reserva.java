@@ -29,6 +29,16 @@ public class Reserva {
         estado = EstadoReserva.CONFIRMADA;
     }
 
+    public double calcularTotal() {
+        double total = 40;
+
+        if ("VIP".equals(tipo)) {
+            total = total * 0.85;
+        }
+
+        return total;
+    }
+
     public String getId() {
         return id;
     }
