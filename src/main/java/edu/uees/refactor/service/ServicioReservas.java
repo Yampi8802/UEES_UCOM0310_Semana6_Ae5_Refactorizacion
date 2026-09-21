@@ -2,35 +2,13 @@ package edu.uees.refactor.service;
 
 import edu.uees.refactor.domain.Reserva;
 
-/**
- * Código heredado intencional para el Laboratorio 1.
- *
- * IMPORTANTE:
- * No refactorizar antes de completar la línea base,
- * el diagnóstico y el plan de refactorización.
- */
 public class ServicioReservas {
 
     public double procesar(
             Reserva r,
             int horasAnticipacion) {
 
-        if (r == null) {
-            return 0;
-        }
-
-        if (r.getCorreo() == null
-                || !r.getCorreo().contains("@")) {
-            return 0;
-        }
-
-        if (r.getInicio() == null
-                || r.getFin() == null
-                || !r.getFin().isAfter(r.getInicio())) {
-            return 0;
-        }
-
-        if (horasAnticipacion < 2) {
+        if (!esReservaValida(r, horasAnticipacion)) {
             return 0;
         }
 
@@ -48,13 +26,40 @@ public class ServicioReservas {
 
         return total;
     }
-    private double calcularTotal(Reserva r) {
-    double total = 40;
 
-    if ("VIP".equals(r.getTipo())) {
-        total = total * 0.85;
+    private boolean esReservaValida(
+            Reserva r,
+            int horasAnticipacion) {
+
+        if (r == null) {
+            return false;
+        }
+
+        if (r.getCorreo() == null
+                || !r.getCorreo().contains("@")) {
+            return false;
+        }
+
+        if (r.getInicio() == null
+                || r.getFin() == null
+                || !r.getFin().isAfter(r.getInicio())) {
+            return false;
+        }
+
+        if (horasAnticipacion < 2) {
+            return false;
+        }
+
+        return true;
     }
 
-    return total;
-}
+    private double calcularTotal(Reserva r) {
+        double total = 40;
+
+        if ("VIP".equals(r.getTipo())) {
+            total = total * 0.85;
+        }
+
+        return total;
+    }
 }
