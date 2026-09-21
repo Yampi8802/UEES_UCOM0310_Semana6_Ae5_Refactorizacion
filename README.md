@@ -415,6 +415,6 @@ Las decisiones sobre los cambios realizados, ejecución del proyecto, pruebas, c
 
 ## 15. Repositorio
 
-**Repositorio GitHub:** pendiente de publicación.
+**Repositorio GitHub:** 
+https://github.com/Yampi8802/UEES_UCOM0310_Semana6_Ae5_Refactorizacion.git
 
-El enlace será agregado una vez que el proyecto sea publicado en GitHub.
