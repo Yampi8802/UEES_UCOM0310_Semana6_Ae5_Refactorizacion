@@ -4,6 +4,12 @@ import edu.uees.refactor.domain.Reserva;
 
 public class ServicioReservas {
 
+    private final ReservaNotificador notificador;
+
+    public ServicioReservas() {
+        this.notificador = new ReservaNotificador();
+    }
+
     public double procesar(
             Reserva r,
             int horasAnticipacion) {
@@ -18,9 +24,7 @@ public class ServicioReservas {
                 "Guardando reserva " + r.getId()
         );
 
-        System.out.println(
-                "Correo enviado a " + r.getCorreo()
-        );
+        notificador.enviarCorreo(r);
 
         r.confirmar();
 
